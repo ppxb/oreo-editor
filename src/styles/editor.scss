@@ -1,0 +1,83 @@
+:root {
+	--main-primary-border: #ebeef5;
+	--main-primary-background: rgba(0, 0, 0, 0.04);
+	--main-primary-font: #4c4c4c;
+	--main-second-font: rgba(0, 0, 0, 0.5);
+	--main-primary-a: #68cef8;
+	--table-th-border: #f0f0f0;
+	--table-th-background: #fafafa;
+}
+
+.tiptap {
+  min-height: 320px;
+  padding: 12px;
+  outline: none;
+
+  table {
+		border-collapse: collapse;
+		table-layout: fixed;
+		width: 100%;
+		margin: 0;
+		overflow: hidden;
+
+		td,
+		th {
+			min-width: 1em;
+			border: 1px solid var(--table-th-border);
+			padding: 10px;
+			vertical-align: top;
+			box-sizing: border-box;
+			position: relative;
+			> * {
+				margin-bottom: 0;
+			}
+		}
+
+		th {
+			font-weight: bold;
+			text-align: left;
+			background-color: var(--table-th-background);
+		}
+
+		.selectedCell:after {
+			z-index: 2;
+			position: absolute;
+			content: "";
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: var(--main-primary-background);
+			pointer-events: none;
+		}
+
+		.column-resize-handle {
+			position: absolute;
+			right: -2px;
+			top: 0;
+			bottom: -2px;
+			width: 4px;
+			background-color: var(--main-select-font-color);
+			pointer-events: none;
+		}
+	}
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafafa;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e1e1e1;
+}
