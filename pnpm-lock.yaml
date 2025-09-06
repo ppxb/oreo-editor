@@ -17,6 +17,9 @@ importers:
       '@tiptap/vue-3':
         specifier: ^3.4.1
         version: 3.4.1(@floating-ui/dom@1.7.4)(@tiptap/core@3.4.1(@tiptap/pm@3.4.1))(@tiptap/pm@3.4.1)(vue@3.5.21(typescript@5.8.3))
+      floating-vue:
+        specifier: ^5.2.2
+        version: 5.2.2(vue@3.5.21(typescript@5.8.3))
       vue:
         specifier: ^3.5.18
         version: 3.5.21(typescript@5.8.3)
@@ -24,6 +27,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^5.2.2
         version: 5.2.2(@unocss/eslint-plugin@66.5.0(eslint@9.34.0(jiti@2.5.1))(typescript@5.8.3))(@vue/compiler-sfc@3.5.21)(eslint-plugin-format@1.0.1(eslint@9.34.0(jiti@2.5.1)))(eslint@9.34.0(jiti@2.5.1))(typescript@5.8.3)
+      '@iconify-json/lucide':
+        specifier: ^1.2.66
+        version: 1.2.66
       '@types/node':
         specifier: ^24.3.1
         version: 24.3.1
@@ -401,6 +407,9 @@ packages:
   '@floating-ui/core@1.7.3':
     resolution: {integrity: sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==}
 
+  '@floating-ui/dom@1.1.1':
+    resolution: {integrity: sha512-TpIO93+DIujg3g7SykEAGZMDtbJRrmnYRCNYSjJlvIbGhBjRSNTLVbNeDQBrzy9qDgUbiWdc7KA0uZHZ2tJmiw==}
+
   '@floating-ui/dom@1.7.4':
     resolution: {integrity: sha512-OOchDgh4F2CchOX94cRVqhvy7b3AFb+/rQXyswmzmGakRfkMgoWVjfnLWkRirfLEfuD4ysVW16eXzwt3jHIzKA==}
 
@@ -422,6 +431,9 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/lucide@1.2.66':
+    resolution: {integrity: sha512-TrhmfThWY2FHJIckjz7g34gUx3+cmja61DcHNdmu0rVDBQHIjPMYO1O8mMjoDSqIXEllz9wDZxCqT3lFuI+f/A==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -1600,6 +1612,15 @@ packages:
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
 
+  floating-vue@5.2.2:
+    resolution: {integrity: sha512-afW+h2CFafo+7Y9Lvw/xsqjaQlKLdJV7h1fCHfcYQ1C4SVMlu7OAekqWgu5d4SgvkBVU0pVpLlVsrSTBURFRkg==}
+    peerDependencies:
+      '@nuxt/kit': ^3.2.0
+      vue: ^3.2.0
+    peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
+
   format@0.2.2:
     resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
     engines: {node: '>=0.4.x'}
@@ -2407,6 +2428,11 @@ packages:
   vue-flow-layout@0.2.0:
     resolution: {integrity: sha512-zKgsWWkXq0xrus7H4Mc+uFs1ESrmdTXlO0YNbR6wMdPaFvosL3fMB8N7uTV308UhGy9UvTrGhIY7mVz9eN+L0Q==}
 
+  vue-resize@2.0.0-alpha.1:
+    resolution: {integrity: sha512-7+iqOueLU7uc9NrMfrzbG8hwMqchfVfSzpVlCMeJQe4pyibqyoifDNbKTZvwxZKDvGkB+PdFeKvnGZMoEb8esg==}
+    peerDependencies:
+      vue: ^3.0.0
+
   vue-tsc@3.0.6:
     resolution: {integrity: sha512-Tbs8Whd43R2e2nxez4WXPvvdjGbW24rOSgRhLOHXzWiT4pcP4G7KeWh0YCn18rF4bVwv7tggLLZ6MJnO6jXPBg==}
     hasBin: true
@@ -2743,6 +2769,10 @@ snapshots:
     dependencies:
       '@floating-ui/utils': 0.2.10
 
+  '@floating-ui/dom@1.1.1':
+    dependencies:
+      '@floating-ui/core': 1.7.3
+
   '@floating-ui/dom@1.7.4':
     dependencies:
       '@floating-ui/core': 1.7.3
@@ -2760,6 +2790,10 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
+
+  '@iconify-json/lucide@1.2.66':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/types@2.0.0': {}
 
@@ -4087,6 +4121,12 @@ snapshots:
 
   flatted@3.3.3: {}
 
+  floating-vue@5.2.2(vue@3.5.21(typescript@5.8.3)):
+    dependencies:
+      '@floating-ui/dom': 1.1.1
+      vue: 3.5.21(typescript@5.8.3)
+      vue-resize: 2.0.0-alpha.1(vue@3.5.21(typescript@5.8.3))
+
   format@0.2.2: {}
 
   fsevents@2.3.3:
@@ -5067,6 +5107,10 @@ snapshots:
       - supports-color
 
   vue-flow-layout@0.2.0: {}
+
+  vue-resize@2.0.0-alpha.1(vue@3.5.21(typescript@5.8.3)):
+    dependencies:
+      vue: 3.5.21(typescript@5.8.3)
 
   vue-tsc@3.0.6(typescript@5.8.3):
     dependencies:

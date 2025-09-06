@@ -1,2 +1,7 @@
-@import "./reset.scss";
-@import "./editor.scss";
+@use "./reset.scss";
+@use "./editor.scss";
+
+.v-popper__arrow-outer,
+.v-popper__arrow-inner {
+  display: none !important;
+}

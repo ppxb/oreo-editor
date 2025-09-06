@@ -3,10 +3,11 @@ import { onBeforeUnmount, watch } from 'vue'
 import { EditorContent, useEditor } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 
-import type { EditorProps } from '@/types'
+import type { EditorProps } from './types'
 import { Table } from '@/extensions'
+import Toolbar from '@/components/toolbar/index.vue'
 
-import '../styles/index.scss'
+import '@/styles/index.scss'
 
 defineOptions({
   name: 'OreoEditor'
@@ -49,10 +50,12 @@ defineExpose({ editor })
 </script>
 
 <template>
-  <EditorContent
-    v-if="editor"
-    rounded-6px bg-white h-full overflow-y-auto
-    border="~ 1px solid #ebeef5"
-    :editor="editor"
-  />
+  <div v-if="editor" flex="~ col">
+    <Toolbar :editor="editor" border-b />
+    <EditorContent
+      rounded-6px bg-white h-full overflow-y-auto
+      border="~ 1px solid #ebeef5"
+      :editor="editor"
+    />
+  </div>
 </template>

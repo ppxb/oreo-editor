@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import OreoEditor from '@/components/Editor.vue'
+import OreoEditor from '@/components/editor/inedx.vue'
 
 const content = ref('')
 

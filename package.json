@@ -12,10 +12,12 @@
     "@tiptap/extension-table": "^3.4.1",
     "@tiptap/starter-kit": "^3.4.1",
     "@tiptap/vue-3": "^3.4.1",
+    "floating-vue": "^5.2.2",
     "vue": "^3.5.18"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.2.2",
+    "@iconify-json/lucide": "^1.2.66",
     "@types/node": "^24.3.1",
     "@unocss/eslint-config": "^66.5.0",
     "@vitejs/plugin-vue": "^6.0.1",
