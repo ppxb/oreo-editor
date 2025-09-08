@@ -8,6 +8,9 @@ import {
 } from 'unocss'
 
 export default defineConfig({
+  shortcuts: {
+    'toolbar-divider': 'bg-[rgba(37,39,45,0.1)] h-[1.5rem] w1px'
+  },
   presets: [
     presetWind4(),
     presetIcons({

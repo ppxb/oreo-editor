@@ -53,8 +53,9 @@ defineExpose({ editor })
   <div v-if="editor" flex="~ col">
     <Toolbar :editor="editor" border-b />
     <EditorContent
-      rounded-6px bg-white h-full overflow-y-auto
-      border="~ 1px solid #ebeef5"
+      h-full overflow-y-auto
+      rounded="bl-2 br-2"
+      border="~ solid t-0 #ebeef5"
       :editor="editor"
     />
   </div>

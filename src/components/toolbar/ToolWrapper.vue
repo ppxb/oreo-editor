@@ -45,6 +45,7 @@ function handleDoubleClick() {
     :placement="placement"
     :delay="{ show: 300, hide: 100 }"
     :triggers="triggers"
+    flex="~ items-center"
   >
     <template #popper>
       <div class="text-xs text-white font-medium">
