@@ -5,3 +5,12 @@
 .v-popper__arrow-inner {
   display: none !important;
 }
+
+.v-popper__wrapper {
+  border: 1px solid var(--main-primary-border);
+  border-radius: 6px;
+}
+
+.v-popper--theme-tooltip .v-popper__inner {
+  background-color: var(--bg-color);
+}

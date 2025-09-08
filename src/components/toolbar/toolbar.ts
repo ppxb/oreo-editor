@@ -7,7 +7,7 @@ export interface ToolbarOptions {
   click: () => void
   dbclick?: () => void
   active: boolean
-  disabled?: boolean
+  get disabled(): boolean
 }
 
 export function createDefaultToolbarOptions(editor: Editor): ToolbarOptions[] {
@@ -20,6 +20,9 @@ export function createDefaultToolbarOptions(editor: Editor): ToolbarOptions[] {
         editor.chain().focus().undo().run()
       },
       active: false,
+      get disabled() {
+        return !editor.can().undo()
+      },
     },
     {
       name: 'redo',
@@ -29,6 +32,9 @@ export function createDefaultToolbarOptions(editor: Editor): ToolbarOptions[] {
         editor.chain().focus().redo().run()
       },
       active: false,
+      get disabled() {
+        return !editor.can().redo()
+      }
     }
   ]
 }
