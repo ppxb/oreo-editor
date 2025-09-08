@@ -5,7 +5,6 @@ export interface ToolbarOptions {
   icon: string
   tip: string
   click: () => void
-  dbclick?: () => void
   active: boolean
   get disabled(): boolean
 }
