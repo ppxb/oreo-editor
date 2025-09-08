@@ -26,7 +26,7 @@ function handleClick() {
   <Tooltip
     flex="~ items-center"
     :placement="placement"
-    delay: { show: 300, hide: 100 },
+    :delay="{ show: 300, hide: 100 }"
     :triggers="option.disabled ? [] : triggers"
   >
     <template #popper>
