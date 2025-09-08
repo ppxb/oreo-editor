@@ -13,7 +13,7 @@ defineOptions({
   name: 'OreoEditor'
 })
 
-const { modelValue = '' } = defineProps<EditorProps>()
+const { modelValue } = defineProps<EditorProps>()
 
 const emit = defineEmits<{
   'update:modelValue': [value: string]
